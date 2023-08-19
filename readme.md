@@ -15,7 +15,9 @@
 
 ### Replace
 
-- Replace from the legacy Format to new format.
+- Replace from the legacy Format to new format. Search and replace in a query.
+
+  ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 
 ### Redirect
 
@@ -32,6 +34,10 @@
 - Type `Legacy` in the search field, select it from the search results and install
 
 ### Usage
+
+- Setup from Plugin Settings
+
+![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/e74ed3e8-a141-447f-a971-5238521383e0)
 
 ---
 

@@ -17,7 +17,7 @@
 
 ### Replace on all files
 
-- Replace from the legacy Format to new format. Search and replace in a query.
+- Replace from the legacy format to new format. Search and replace in a query.
 
   ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 

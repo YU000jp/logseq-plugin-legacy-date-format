@@ -2,7 +2,7 @@
 
 - Replace and redirect to enable the use of legacy date formats
 
-- In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. To address this issue, a plugin has been developed.
+- In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. To address this issue, this plugin has been developed.
 
 - Development stage 👷🚧
 

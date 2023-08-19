@@ -1,4 +1,6 @@
-# Logseq Plugin: Template for TypeScript
+# Logseq Plugin: Legacy date format 🗝️
+
+- `Legacy date format` plugin will come in handy when the user changes the date format.
 
 - Development stage 👷🚧
 

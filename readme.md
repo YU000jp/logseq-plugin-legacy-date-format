@@ -1,19 +1,25 @@
 # Logseq Plugin: Legacy date format 🗝️
 
-- `Legacy date format` plugin will come in handy when the user changes the date format.
+- Use the legacy date format for replacement and redirection.
 
 - Development stage 👷🚧
 
-> This plugin still has room for improvement. Please let me know if you encounter any issues or have any ideas for enhancement.
-
-[![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-template-typescript)](https://github.com/YU000jp/logseq-plugin-template-typescript/releases)
-[![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-template-typescript?color=blue)](https://github.com/YU000jp/logseq-plugin-template-typescript/LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-template-typescript/total.svg)](https://github.com/YU000jp/logseq-plugin-template-typescript/releases)
+[![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
+[![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-legacy-date-format/total.svg)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 <!-- Published 2023 -->
 
 ---
 
 ## Features
+
+### Replace
+
+- Replace from the legacy Format to new format.
+
+### Redirect
+
+- Enabling the use of expired links due to changes in user date formatting. When opening the page, if the title matches the legacy format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.
 
 ---
 
@@ -23,7 +29,7 @@
 
 - Press [`---`] on the top right toolbar to open [`Plugins`]
 - Select marketplace
-- Type `WORD` in the search field, select it from the search results and install
+- Type `Legacy` in the search field, select it from the search results and install
 
 ### Usage
 
@@ -31,7 +37,7 @@
 
 ## Showcase / Questions / Ideas / Help
 
-> Go to the [discussion](./discussions) tab to ask and find this kind of things.
+> Go to the [discussion](https://github.com/YU000jp/logseq-plugin-legacy-date-format/discussions) tab to ask and find this kind of things.
 
 ## Author
 

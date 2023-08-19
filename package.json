@@ -1,6 +1,6 @@
 {
     "name": "logseq-plugin-legacy-date-format",
-    "description": "Use the legacy date format for replacement and redirection.",
+    "description": "Replace and redirect to enable the use of legacy date formats",
     "repository": "https://github.com/YU000jp/logseq-plugin-legacy-date-format.git",
     "author": "YU000jp",
     "license": "MIT",

@@ -1,6 +1,6 @@
 # Logseq Plugin: Legacy date format 🗝️
 
-- Use the legacy date format for replacement and redirection.
+- Replace and redirect to enable the use of legacy date formats
 
 - Development stage 👷🚧
 

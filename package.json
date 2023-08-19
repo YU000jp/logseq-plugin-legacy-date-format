@@ -7,7 +7,7 @@
     "logseq": {
         "id": "legacy-date-format",
         "title": "Legacy date format",
-        "icon": "./icon.svg",
+        "icon": "./icon.png",
         "main": "./dist/index.html"
     },
     "effect": true,

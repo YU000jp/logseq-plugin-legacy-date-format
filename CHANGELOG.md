@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.0.1...v1.0.2) (2023-08-19)
+
+
+### Bug Fixes
+
+* **Replace:** refactor query process ([f5d787c](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/f5d787c5e7b4b67200107ff10dd87beaf5499155))
+
 ## [1.0.1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.0.0...v1.0.1) (2023-08-19)
 
 

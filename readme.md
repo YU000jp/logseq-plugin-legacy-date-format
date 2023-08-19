@@ -44,7 +44,7 @@
 - After changing the Date format, it's necessary to perform a re-index in Logseq. There are a few important points to note:
 
   1. The UUID of blocks gets changed, which might lead to the inability to use features like embedding or references.
-  1. Pages other than the journal have their "create-at" creation date property updated. However, this is an invisible property, so it doesn't cause any issues.
+  1. Pages other than journals have their "create-at" creation date property updated. However, this is an invisible property, so it doesn't cause any issues.
 
 
 ---

@@ -2,6 +2,8 @@
 
 - Replace and redirect to enable the use of legacy date formats
 
+- In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. To address this issue, a plugin has been developed.
+
 - Development stage 👷🚧
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
@@ -13,13 +15,13 @@
 
 ## Features
 
-### Replace
+### Replace on all files
 
 - Replace from the legacy Format to new format. Search and replace in a query.
 
   ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 
-### Redirect (Option)
+### Redirect when open a page (Option)
 
 - Enabling the use of expired links due to changes in user date formatting. When opening the page, if the title matches the legacy format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.
 
@@ -38,6 +40,12 @@
 - Setup from Plugin Settings
 
   ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/e74ed3e8-a141-447f-a971-5238521383e0)
+
+- After changing the Date format, it's necessary to perform a re-index in Logseq. There are a few important points to note:
+
+  1. The UUID of blocks gets changed, which might lead to the inability to use features like embedding or references.
+  1. Pages other than the journal have their "create-at" creation date property updated. However, this is an invisible property, so it doesn't cause any issues.
+
 
 ---
 

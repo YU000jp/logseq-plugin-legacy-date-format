@@ -1,6 +1,6 @@
 # Logseq Plugin: Legacy date format 🗝️
 
-- Replace and redirect to enable the use of legacy date formats
+- Replace or redirect to enable the use of legacy date formats. Replace inactive links with journal attributes.They function as both links and references within.
 
 - In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. ( [Logseq#4279](https://github.com/logseq/logseq/issues/4279) ) To address this issue, this plugin has been developed.
 

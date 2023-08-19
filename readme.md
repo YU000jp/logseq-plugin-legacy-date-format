@@ -15,7 +15,7 @@
 
 ## Features
 
-### Replace on all files
+### Replace all journal links on all files
 
 - Replace from the legacy format to new format. Search and replace in a query.
 

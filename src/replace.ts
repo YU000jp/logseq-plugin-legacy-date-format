@@ -75,6 +75,7 @@ const openStartWindow = async () => {
         1. Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.
       </p>
       <hr/>
+      <p>If you have a lot of file, it may take a long time to run.</p>
       <p><button id="legacyDateFormatStartButton" class="ui__button">Run (Replace)</button></p>
       </div>
       <style>
@@ -139,7 +140,7 @@ const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
   );
   //ジャーナルページからフォーマットの連想配列を作成する(キーに古いフォーマット、値に新しいフォーマット)
   const journalDaysObj = {};
-  journalPagesArr.forEach(async (page) => {
+  journalPagesArr.forEach((page) => {
     if (!page.journalDay) return;
     //日付をフォーマット
     const legacyFormat = format(
@@ -162,33 +163,34 @@ const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
 };
 
 const queryAndReplace = (journalDaysObj: {}) =>
-  new Promise((resolve) => {
-    Object.keys(journalDaysObj).forEach(async (key) => {
-      //古いフォーマットの各日付に一致するものをクエリーで検索する
-      logseq.DB.datascriptQuery(
+  new Promise(async (resolve) => {
+    for (const key of Object.keys(journalDaysObj)) {
+      // 古いフォーマットの各日付に一致するものをクエリーで検索する
+      const result: any[] = await logseq.DB.datascriptQuery(
         `
-[:find (pull ?b [*])
- :where
- [?b :block/content ?c]
- [(re-pattern "${key}") ?p]
- [(re-find ?p ?c)]
-]
-`
-      ).then((result: []) => {
-        if (!result.length) return;
-        result.forEach((blocks: BlockEntity[]) => {
-          blocks.forEach((block: BlockEntity) => {
+    [:find (pull ?b [*])
+     :where
+     [?b :block/content ?c]
+     [(re-pattern "${key}") ?p]
+     [(re-find ?p ?c)]
+    ]
+    `
+      );
+      if (result.length > 0) {
+        for (const blocks of result) {
+          for (const block of blocks) {
             const legacyFormat = key;
             const newFormat = journalDaysObj[key];
-            //新しいフォーマットから古いフォーマットに置き換える
-            let content = block.content.replaceAll(newFormat, legacyFormat); //二重動作防止のため
 
-            //古いフォーマットから新しいフォーマットに置き換える
-            content = block.content.replaceAll(legacyFormat, newFormat);
-            logseq.Editor.updateBlock(block.uuid, content);
-          });
-        });
-      });
-    });
+            // 新しいフォーマットから古いフォーマットに置き換える
+            let content = block.content.replaceAll(newFormat, legacyFormat); // 二重動作防止のため
+            content = content.replaceAll(legacyFormat, newFormat);
+
+            await logseq.Editor.updateBlock(block.uuid, content);
+          }
+        }
+      }
+    }
+
     resolve(0);
   });

@@ -6,7 +6,7 @@
 
 ## Showcase
 
-- Replace it with the format yyyy-MM-dd, which is consistent with Obsidian.
+- Replace it with format yyyy-MM-dd, which is consistent with Obsidian.
 - Replace it with hierarchy-enabled yyyy/MM/dd format.
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)

@@ -4,7 +4,10 @@
 
 - In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. ( [Logseq#4279](https://github.com/logseq/logseq/issues/4279) ) To address this issue, this plugin has been developed.
 
-- It is possible to replace it with the format yyyy-MM-dd, which is consistent with Obsidian.
+## Showcase
+
+- Replace it with the format yyyy-MM-dd, which is consistent with Obsidian.
+- Replace it with hierarchy-enabled yyyy/MM/dd format.
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)

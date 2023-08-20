@@ -15,9 +15,8 @@ Published 2023/08/20
 
 ### Replace all journal links on all files
 
-- Replace from the legacy format to new format. Search and replace in queries.
-
-  ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
+> After changing user date format and running re-index on Logseq.
+- Replace it from the legacy format to new format. Search and replace in queries.
 
 ### Redirect when open a page (Option)
 
@@ -38,6 +37,10 @@ Published 2023/08/20
 - Setup from Plugin Settings
 
   ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/e74ed3e8-a141-447f-a971-5238521383e0)
+
+- Replace from the legacy format to new format
+
+  ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 
 - After changing the Date format, it's necessary to perform a re-index in Logseq. There are a few important points to note:
 

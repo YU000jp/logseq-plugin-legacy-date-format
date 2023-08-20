@@ -49,8 +49,27 @@ Published 2023/08/20
 
 #### All date format demo
 
-![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/b0431d24-1d43-42e6-99a3-67c020846615)
-
+| Date format |	day |
+| --- | --- |
+| MM/dd/yyyy | 08/20/2023 |
+| dd-MM-yyyy | 20-08-2023 |
+| dd.MM.yyyy | 20.08.2023 |
+| yyyy/MM/dd | 2023/08/20 |
+| MM-dd-yyyy | 08-20-2023 |
+| MM/dd/yyyy | 08/20/2023 |
+| MMM do, yyyy | Aug 20th, 2023 |
+| MMMM do, yyyy | August 20th, 2023 |
+| MM_dd_yyyy | 08_20_2023 |
+| dd-MM-yyyy | 20-08-2023 |
+| do MMM yyyy | 20th Aug 2023 |
+| do MMMM yyyy | 20th August 2023 |
+| yyyy-MM-dd | 2023-08-20 |
+| yyyy-MM-dd EEEE | 2023-08-20 Sunday |
+| yyyy/MM/dd | 2023/08/20 |
+| yyyyMMdd | 20230820 |
+| yyyy_MM_dd | 2023_08_20 |
+| yyyy年MM月dd日 | 2023年08月20日 |
+ 
 ---
 
 ## Showcase / Questions / Ideas / Help

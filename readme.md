@@ -1,15 +1,13 @@
 # Logseq Plugin: Legacy date format 🗝️
 
-- Replace or redirect to enable the use of legacy date formats. Replace inactive links with journal attributes.They function as both links and references within.
+- Replace or redirect to enable the use of legacy date formats. Replace inactive links with journal attributes. They function as both links and references within.
 
 - In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. ( [Logseq#4279](https://github.com/logseq/logseq/issues/4279) ) To address this issue, this plugin has been developed.
-
-- Development stage 👷🚧
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-legacy-date-format/total.svg)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
-<!-- Published 2023 -->
+Published 2023/08/20
 
 ---
 
@@ -29,7 +27,7 @@
 
 ## Getting Started
 
-### Install from Logseq Marketplace (Coming👷🚧)
+### Install from Logseq Marketplace
 
 - Press [`---`] on the top right toolbar to open [`Plugins`]
 - Select marketplace
@@ -46,6 +44,9 @@
   1. The UUID of blocks gets changed, which might lead to the inability to use features like embedding or references.
   1. Pages other than journals have their "create-at" creation date property updated. However, this is an invisible property, so it doesn't cause any issues.
 
+#### All date format demo
+
+![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/b0431d24-1d43-42e6-99a3-67c020846615)
 
 ---
 

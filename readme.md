@@ -44,6 +44,9 @@ Published 2023/08/20
   1. The UUID of blocks gets changed, which might lead to the inability to use features like embedding or references.
   1. Pages other than journals have their "create-at" creation date property updated. However, this is an invisible property, so it doesn't cause any issues.
 
+#### All date format demo
+
+![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/b0431d24-1d43-42e6-99a3-67c020846615)
 
 ---
 

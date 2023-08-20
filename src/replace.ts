@@ -1,6 +1,5 @@
 import {
   AppUserConfigs,
-  BlockEntity,
   LSPluginBaseInfo,
   PageEntity,
 } from "@logseq/libs/dist/LSPlugin";
@@ -62,8 +61,7 @@ const openStartWindow = async () => {
       <div>
       <table>
         <tr><th></th><th>selected (legacy)</th><th>New format</th> </tr>
-        <tr><td>Date format</td><td>${
-          logseq.settings!.legacyDateFormatSelect
+        <tr><td>Date format</td><td>${logseq.settings!.legacyDateFormatSelect
         }</td><td>${preferredDateFormat}</td></tr>
         <tr><td>Today</td><td>${legacyTodayStr}</td><td>${newTodayStr}</td></tr>
       </table>

@@ -57,4 +57,11 @@ export const settingsTemplate: SettingSchemaDesc[] = [
     description:
       "When opening the page, if the title matches the legacy format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.",
   },
+  {//日付フォーマットのデモンストレーション
+    key: "loadDateFormatDemo",
+    title: "All date format demo",
+    type: "boolean",
+    default: false,
+    description: "Open the dialog on click",
+  }
 ];

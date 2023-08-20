@@ -4,6 +4,7 @@ import "@logseq/libs"; //https://plugins-doc.logseq.com/
 import { loadLegacyDateFormatRedirect } from "./redirect";
 import { loadLegacyDateFormatReplace } from "./replace";
 import { settingsTemplate } from "./settings";
+import { loadDateFormatDemo } from "./demoDateFormat";
 
 /* main */
 const main = () => {
@@ -28,6 +29,10 @@ const main = () => {
 
   //設定画面から画面を開く
   loadLegacyDateFormatReplace();
+
+  //デモ 設定画面から画面を開く
+  loadDateFormatDemo();
+
 }; /* end_main */
 
 logseq.ready(main).catch(console.error);

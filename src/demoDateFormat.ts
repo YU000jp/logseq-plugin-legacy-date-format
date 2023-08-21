@@ -1,5 +1,4 @@
 import {
-  AppUserConfigs,
   LSPluginBaseInfo,
 } from "@logseq/libs/dist/LSPlugin";
 import { format } from "date-fns";

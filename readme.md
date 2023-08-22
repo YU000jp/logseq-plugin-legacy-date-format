@@ -6,8 +6,9 @@
 
 ## Showcase
 
-- Replace it with format yyyy-MM-dd, which is consistent with Obsidian.
-- Replace it with hierarchy-enabled yyyy/MM/dd format.
+- If changed user date format
+  - Replace inactive links with format yyyy-MM-dd, which is consistent with Obsidian.
+  - Replace it with hierarchy-enabled yyyy/MM/dd format.
 
 [![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 [![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)

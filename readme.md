@@ -4,6 +4,8 @@
 
 - In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. ( [Logseq#4279](https://github.com/logseq/logseq/issues/4279) ) To address this issue, this plugin has been developed.
 
+> Only markdown format supported
+
 ## Showcase
 
 - If changed user date format

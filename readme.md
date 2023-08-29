@@ -21,7 +21,7 @@ Published 2023/08/20
 
 ## Features
 
-### Replace all journal links on all files
+### Replace journal links on all files
 
 > After changing user date format and running re-index on Logseq.
 - Replace it from the legacy format to new format. Search and replace in queries.

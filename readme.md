@@ -57,26 +57,34 @@ Published 2023/08/20
 
 #### All date format demo
 
-| Date format |	day |
-| --- | --- |
-| MM/dd/yyyy | 08/20/2023 |
-| dd-MM-yyyy | 20-08-2023 |
-| dd.MM.yyyy | 20.08.2023 |
-| yyyy/MM/dd | 2023/08/20 |
-| MM-dd-yyyy | 08-20-2023 |
-| MM/dd/yyyy | 08/20/2023 |
-| MMM do, yyyy | Aug 20th, 2023 |
-| MMMM do, yyyy | August 20th, 2023 |
-| MM_dd_yyyy | 08_20_2023 |
-| dd-MM-yyyy | 20-08-2023 |
-| do MMM yyyy | 20th Aug 2023 |
-| do MMMM yyyy | 20th August 2023 |
-| yyyy-MM-dd | 2023-08-20 |
-| yyyy-MM-dd EEEE | 2023-08-20 Sunday |
-| yyyy/MM/dd | 2023/08/20 |
-| yyyyMMdd | 20230820 |
-| yyyy_MM_dd | 2023_08_20 |
-| yyyy年MM月dd日 | 2023年08月20日 |
+| Date format          | Today                |
+|----------------------|----------------------|
+| E, MM/dd/yyyy        | Tue, 09/19/2023      |
+| E, dd-MM-yyyy        | Tue, 19-09-2023      |
+| E, dd.MM.yyyy        | Tue, 19.09.2023      |
+| E, yyyy/MM/dd        | Tue, 2023/09/19      |
+| EEE, MM/dd/yyyy      | Tue, 09/19/2023      |
+| EEE, dd-MM-yyyy      | Tue, 19-09-2023      |
+| EEE, dd.MM.yyyy      | Tue, 19.09.2023      |
+| EEE, yyyy/MM/dd      | Tue, 2023/09/19      |
+| EEEE, MM/dd/yyyy     | Tuesday, 09/19/2023  |
+| EEEE, dd-MM-yyyy     | Tuesday, 19-09-2023  |
+| EEEE, dd.MM.yyyy     | Tuesday, 19.09.2023  |
+| EEEE, yyyy/MM/dd     | Tuesday, 2023/09/19  |
+| MM-dd-yyyy           | 09-19-2023           |
+| MM/dd/yyyy           | 09/19/2023           |
+| dd-MM-yyyy           | 19-09-2023           |
+| dd.MM.yyyy           | 19.09.2023           |
+| yyyy/MM/dd           | 2023/09/19           |
+| MM_dd_yyyy           | 09_19_2023           |
+| do MMM yyyy          | 19th Sep 2023        |
+| do MMMM yyyy         | 19th September 2023  |
+| yyyy-MM-dd           | 2023-09-19           |
+| yyyy-MM-dd EEEE      | 2023-09-19 Tuesday   |
+| yyyy/MM/dd           | 2023/09/19           |
+| yyyyMMdd             | 20230919             |
+| yyyy_MM_dd           | 2023_09_19           |
+| yyyy年MM月dd日       | 2023年09月19日       |
  
 ---
 

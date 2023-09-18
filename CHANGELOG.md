@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.1.1...v1.2.0) (2023-09-18)
+
+
+### Features
+
+* **Add:** date formats ([e3e1f35](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/e3e1f35e544e8848a2e8d0525e170eea813294c9))
+
 ## [1.1.1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.1.0...v1.1.1) (2023-08-21)
 
 

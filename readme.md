@@ -19,14 +19,14 @@ Published 2023/08/20
 
 ---
 
-## Features
+## Options
 
 ### Replace journal links on all files
 
 > After changing user date format and running re-index on Logseq.
 - Replace it from the legacy format to new format. Search and replace in queries.
 
-### Redirect when open a page (Option)
+### Redirect when open a page
 
 - Enabling the use of expired links due to changes in user date formatting. When opening the page, if the title matches the legacy format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.
 

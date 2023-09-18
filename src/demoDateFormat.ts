@@ -31,6 +31,19 @@ const openStartWindow = async () => {
   const today = new Date();
 
   const list = [
+    "E, MM/dd/yyyy",
+    "E, dd-MM-yyyy",
+    "E, dd.MM.yyyy",
+    "E, yyyy/MM/dd",
+    "EEE, MM/dd/yyyy",
+    "EEE, dd-MM-yyyy",
+    "EEE, dd.MM.yyyy",
+    "EEE, yyyy/MM/dd",
+    "EEEE, MM/dd/yyyy",
+    "EEEE, dd-MM-yyyy",
+    "EEEE, dd.MM.yyyy",
+    "EEEE, yyyy/MM/dd",
+    "MM-dd-yyyy",
     "MM/dd/yyyy",
     "dd-MM-yyyy",
     "dd.MM.yyyy",

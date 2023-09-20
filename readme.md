@@ -59,6 +59,7 @@ Published 2023/08/20
 
 | Date format          | Today                |
 |----------------------|----------------------|
+| E, d MMMM yyyy       | Tue, 19 September 2023 |
 | E, MM/dd/yyyy        | Tue, 09/19/2023      |
 | E, dd-MM-yyyy        | Tue, 19-09-2023      |
 | E, dd.MM.yyyy        | Tue, 19.09.2023      |

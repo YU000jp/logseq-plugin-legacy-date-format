@@ -36,9 +36,7 @@ Published 2023/08/20
 
 ### Install from Logseq Marketplace
 
-- Press [`---`] on the top right toolbar to open [`Plugins`]
-- Select marketplace
-- Type `Legacy` in the search field, select it from the search results and install
+- Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Legacy` in the search field, select it from the search results and install.
 
 ### Usage
 

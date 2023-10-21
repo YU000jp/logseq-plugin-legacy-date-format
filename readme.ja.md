@@ -53,35 +53,35 @@ Logseq Marketplaceからインストール
 
 #### すべての日付フォーマットのデモ
 
-| 日付フォーマット          | 今日                |
+| Date format          | Today                |
 |----------------------|----------------------|
-| E, d MMMM yyyy       | 火, 19 9月 2023     |
-| E, MM/dd/yyyy        | 火, 09/19/2023      |
-| E, dd-MM-yyyy        | 火, 19-09-2023      |
-| E, dd.MM.yyyy        | 火, 19.09.2023      |
-| E, yyyy/MM/dd        | 火, 2023/09/19      |
-| EEE, MM/dd/yyyy      | 火, 09/19/2023      |
-| EEE, dd-MM-yyyy      | 火, 19-09-2023      |
-| EEE, dd.MM.yyyy      | 火, 19.09.2023      |
-| EEE, yyyy/MM/dd      | 火, 2023/09/19      |
-| EEEE, MM/dd/yyyy     | 火曜日, 09/19/2023  |
-| EEEE, dd-MM-yyyy     | 火曜日, 19-09-2023  |
-| EEEE, dd.MM.yyyy     | 火曜日, 19.09.2023  |
-| EEEE, yyyy/MM/dd     | 火曜日, 2023/09/19  |
+| E, d MMMM yyyy       | Tue, 19 September 2023 |
+| E, MM/dd/yyyy        | Tue, 09/19/2023      |
+| E, dd-MM-yyyy        | Tue, 19-09-2023      |
+| E, dd.MM.yyyy        | Tue, 19.09.2023      |
+| E, yyyy/MM/dd        | Tue, 2023/09/19      |
+| EEE, MM/dd/yyyy      | Tue, 09/19/2023      |
+| EEE, dd-MM-yyyy      | Tue, 19-09-2023      |
+| EEE, dd.MM.yyyy      | Tue, 19.09.2023      |
+| EEE, yyyy/MM/dd      | Tue, 2023/09/19      |
+| EEEE, MM/dd/yyyy     | Tuesday, 09/19/2023  |
+| EEEE, dd-MM-yyyy     | Tuesday, 19-09-2023  |
+| EEEE, dd.MM.yyyy     | Tuesday, 19.09.2023  |
+| EEEE, yyyy/MM/dd     | Tuesday, 2023/09/19  |
 | MM-dd-yyyy           | 09-19-2023           |
 | MM/dd/yyyy           | 09/19/2023           |
 | dd-MM-yyyy           | 19-09-2023           |
 | dd.MM.yyyy           | 19.09.2023           |
 | yyyy/MM/dd           | 2023/09/19           |
 | MM_dd_yyyy           | 09_19_2023           |
-| do MMM yyyy          | 2023年09月19日       |
-| do MMMM yyyy         | 2023年09月19日       |
+| do MMM yyyy          | 19th Sep 2023        |
+| do MMMM yyyy         | 19th September 2023  |
 | yyyy-MM-dd           | 2023-09-19           |
-| yyyy-MM-dd EEEE      | 2023-09-19 火曜日    |
+| yyyy-MM-dd EEEE      | 2023-09-19 Tuesday   |
 | yyyy/MM/dd           | 2023/09/19           |
 | yyyyMMdd             | 20230919             |
 | yyyy_MM_dd           | 2023_09_19           |
-| yyyy年MM月dd日       | 2023年09月19日       
+| yyyy年MM月dd日       | 2023年09月19日       |
 
 ---
 

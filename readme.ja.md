@@ -3,7 +3,7 @@
 [English](https://github.com/YU000jp/logseq-plugin-legacy-date-format) | [日本語](https://github.com/YU000jp/logseq-plugin-legacy-date-format/blob/main/readme.ja.md)
 
 通常、Logseqでは日付フォーマットを変更した後に、日付リンクが更新されず、そのリンクが無効になります。そのリンクを置き換えて使用可能にするためのプラグインです。リダイレクトもできます。
-  > Logseqでは、グラフ構築後にユーザー日付フォーマットを変更することは困難です。これは、再インデックスを実行した後でも、リンクが古い日付フォーマットのままであるためです（[Logseq#4279](https://github.com/logseq/logseq/issues/4279)）。この問題を解決するために、このプラグインが開発されました。
+  > Logseqでは、グラフ構築後にユーザー日付形式 を変更することは困難です。これは、再インデックスを実行した後でも、リンクが古い日付形式のままであるためです（[Logseq#4279](https://github.com/logseq/logseq/issues/4279)）。この問題を解決するために、このプラグインが開発されました。
 
 [![最新リリースバージョン](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 [![ライセンス](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)
@@ -12,9 +12,9 @@
 
 ## ショーケース
 
-- ユーザー日付フォーマットを変更した場合
-  - 非アクティブなリンクをObsidianと一貫したyyyy-MM-dd形式に置換します。
-  - 階層付きyyyy/MM/dd形式に置換します。
+- ユーザー日付形式を変更する
+  1. 非アクティブなリンクを、Obsidian と同じように、"yyyy-MM-dd" 形式に置き換える。
+  1. 階層機能が有効になる、"yyyy/MM/dd" 形式に置き換える。
 
 ## オプション
 
@@ -28,7 +28,7 @@
 
 ## はじめに
 
-Logseq Marketplaceからインストール
+Logseq マーケットプレースからインストール
   - 右上のツールバーで [`---`] を押して [`プラグイン`] を開きます。マーケットプレイスを選択し、「Legacy」を検索フィールドに入力して、検索結果から選択してインストールします。
 
 ### 使い方
@@ -48,7 +48,7 @@ Logseq Marketplaceからインストール
 
 #### すべての日付フォーマットのデモ
 
-| Date format          | Today                |
+| 日付形式             | 今日                 |
 |----------------------|----------------------|
 | E, d MMMM yyyy       | Tue, 19 September 2023 |
 | E, MM/dd/yyyy        | Tue, 09/19/2023      |

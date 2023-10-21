@@ -2,11 +2,8 @@
 
 [English](https://github.com/YU000jp/logseq-plugin-legacy-date-format) | [日本語](https://github.com/YU000jp/logseq-plugin-legacy-date-format/blob/main/readme.ja.md)
 
-- 通常、Logseqでは日付フォーマットを変更した後に、日付リンクが更新されず、そのリンクが無効になります。そのリンクを置き換えて使用可能にするためのプラグインです。リダイレクトもできます。
-
-- Logseqでは、グラフ構築後にユーザー日付フォーマットを変更することは困難です。これは、再インデックスを実行した後でも、リンクが古い日付フォーマットのままであるためです（[Logseq#4279](https://github.com/logseq/logseq/issues/4279)）。この問題を解決するために、このプラグインが開発されました。
-
-> サポートされているのはMarkdown形式のみです
+通常、Logseqでは日付フォーマットを変更した後に、日付リンクが更新されず、そのリンクが無効になります。そのリンクを置き換えて使用可能にするためのプラグインです。リダイレクトもできます。
+  > Logseqでは、グラフ構築後にユーザー日付フォーマットを変更することは困難です。これは、再インデックスを実行した後でも、リンクが古い日付フォーマットのままであるためです（[Logseq#4279](https://github.com/logseq/logseq/issues/4279)）。この問題を解決するために、このプラグインが開発されました。
 
 [![最新リリースバージョン](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
 [![ライセンス](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)

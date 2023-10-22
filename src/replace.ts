@@ -5,6 +5,7 @@ import {
 } from "@logseq/libs/dist/LSPlugin";
 import { format } from "date-fns";
 import { getJournalDayDate } from "./lib";
+import { t } from "logseq-l10n"
 let processing: Boolean = false;
 //設定画面から項目をオンにする→スタート画面が出る→スタート画面で実行ボタンを押す→実行ボタンを押したときのイベント処理
 
@@ -36,7 +37,7 @@ const openStartWindow = async () => {
   try {
     if (preferredDateFormat === logseq.settings!.legacyDateFormatSelect) {
       //古いフォーマットと新しいフォーマットが同じ場合
-      logseq.UI.showMsg("Formats have not changed.", "warning", {
+      logseq.UI.showMsg(t("Formats have not changed."), "warning", {
         timeout: 5000,
       });
       return;
@@ -52,7 +53,7 @@ const openStartWindow = async () => {
     logseq.provideUI({
       key: "legacyDateFormatStartWindow",
       attrs: {
-        title: "Replace legacy date format",
+        title: t("Replace previous date format"),
       },
       close: "outside",
       reset: true,
@@ -60,21 +61,21 @@ const openStartWindow = async () => {
       template: `
       <div>
       <table>
-        <tr><th></th><th>selected (legacy)</th><th>New format</th> </tr>
-        <tr><td>Date format</td><td>${logseq.settings!.legacyDateFormatSelect
+        <tr><th></th><th>${t("selected (legacy)")}</th><th>${t("new format")}</th> </tr>
+        <tr><td>${t("Date format")}</td><td>${logseq.settings!.legacyDateFormatSelect
         }</td><td>${preferredDateFormat}</td></tr>
-        <tr><td>Today</td><td>${legacyTodayStr}</td><td>${newTodayStr}</td></tr>
+        <tr><td>${t("Today")}</td><td>${legacyTodayStr}</td><td>${newTodayStr}</td></tr>
       </table>
-      <p>⚠️If the format displayed here is incorrect, refrain from running.</p>
+      <p>⚠️${t("If the format displayed here is incorrect, refrain from running.")}</p>
       <hr/>
       <p>
-        ⚠️Please back up your data before running.<br/>
+        ⚠️${t("Please back up your data before running.")}<br/>
         <br/>
-        1. Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.
+        1. ${t("Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.")}<br/>
       </p>
       <hr/>
-      <p>If you have a lot of file, it may take a long time to run.</p>
-      <p><button id="legacyDateFormatStartButton" class="ui__button">Run (Replace)</button></p>
+      <p>${t("If you have a lot of file, it may take a long time to run.")}</p>
+      <p><button id="legacyDateFormatStartButton" class="ui__button">${t("Run (Replace)")}</button></p>
       </div>
       <style>
         button#legacyDateFormatStartButton{
@@ -113,7 +114,7 @@ const openStartWindow = async () => {
       startButton.addEventListener("click", async () => {
         if (processing) return;
         processing = true;
-        const messageKey = await logseq.UI.showMsg("Running...", "info", {
+        const messageKey = await logseq.UI.showMsg(t("Running..."), "info", {
           //実行中メッセージ
           timeout: 100000,
         });
@@ -157,7 +158,7 @@ const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
   await queryAndReplace(journalDaysObj);
 
   logseq.UI.closeMsg(messageKey);
-  logseq.UI.showMsg("Finish.", "info", { timeout: 5000 });
+  logseq.UI.showMsg(t("Finish."), "info", { timeout: 5000 });
 };
 
 const queryAndReplace = (journalDaysObj: {}) =>

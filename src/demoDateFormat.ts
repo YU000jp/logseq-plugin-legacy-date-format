@@ -2,6 +2,7 @@ import {
   LSPluginBaseInfo,
 } from "@logseq/libs/dist/LSPlugin";
 import { format } from "date-fns";
+import { t } from "logseq-l10n"
 
 //設定画面から項目をオンにする→スタート画面が出る
 //トリガー
@@ -71,7 +72,7 @@ const openStartWindow = async () => {
   logseq.provideUI({
     key: "dateFormatDemo",
     attrs: {
-      title: "All date format demo",
+      title: t("All date format demo"),
     },
     close: "outside",
     reset: true,
@@ -79,11 +80,9 @@ const openStartWindow = async () => {
     template: `
       <div>
       <table>
-        <th>Date format</th><th>Today</th></tr>
+        <th>${t("Date format")}</th><th>${t("Today")}</th></tr>
         ${tr.join("\n")}
       </table>
-
-      
       </div>
       <style>
         button#legacyDateFormatStartButton{

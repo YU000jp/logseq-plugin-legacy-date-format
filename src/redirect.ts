@@ -1,5 +1,6 @@
 import { AppUserConfigs, PageEntity } from "@logseq/libs/dist/LSPlugin";
 import { format, isValid, parse } from "date-fns";
+import { t } from "logseq-l10n"
 let processingPageName = "";
 export const loadLegacyDateFormatRedirect = () => {
   //ページを開いたとき
@@ -48,7 +49,7 @@ const matchDateFormat = async (
   preferredDateFormat: string
 ) => {
   processingPageName = pageName;
-  logseq.UI.showMsg("Matched as legacy date format");
+  logseq.UI.showMsg(t("Matched the previous date format"));
   //ページ移動
   const formatPageName = format(parsedDate, preferredDateFormat);
   if ((await logseq.Editor.getPage(formatPageName)) as PageEntity | null)

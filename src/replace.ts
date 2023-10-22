@@ -61,7 +61,7 @@ const openStartWindow = async () => {
       template: `
       <div>
       <table>
-        <tr><th></th><th>${t("selected (legacy)")}</th><th>${t("new format")}</th> </tr>
+        <tr><th></th><th>${t("selected (previous)")}</th><th>${t("new format")}</th> </tr>
         <tr><td>${t("Date format")}</td><td>${logseq.settings!.legacyDateFormatSelect
         }</td><td>${preferredDateFormat}</td></tr>
         <tr><td>${t("Today")}</td><td>${legacyTodayStr}</td><td>${newTodayStr}</td></tr>

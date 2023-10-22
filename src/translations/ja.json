@@ -1,3 +1,23 @@
 {
-
+    "All date format demo": "全ての日付形式のデモ",
+    "Date format": "日付形式",
+    "Today": "今日",
+    "Matched the previous date format": "以前の日付形式と一致しました",
+    "Formats have not changed.": "形式が変更されていません。",
+    "Replace previous date format": "以前の日付形式を置き換える",
+    "selected (previous)": "選択された形式 (レガシー)",
+    "new format": "新しい形式",
+    "If the format displayed here is incorrect, refrain from running.": "ここに表示される形式が正しくない場合は、実行を控えてください。",
+    "Please back up your data before running.": "実行する前にデータをバックアップしてください。",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "続行する前に、フォルダ全体の完全なバックアップを取ることをお勧めします。これには、指定された日付形式に一致する文字列を置き換えることが含まれます。完璧なパフォーマンスと問題なく動作することを保証することはできません。",
+    "If you have a lot of file, it may take a long time to run.": "ファイルが多い場合は、実行に時間がかかる場合があります。",
+    "Run (Replace)": "実行 (置換)",
+    "Running...": "実行中...",
+    "Finish.": "終わりました。",
+    "Support previous date format": "以前の日付形式をサポート",
+    "Select previous date format": "以前の日付形式を選択",
+    "Replace from the previous Format to new format.": "以前の形式から新しい形式に置き換えます。",
+    "Open the dialog on click": "クリックでダイアログを開く",
+    "Redirect the link of previous date format to the journal page": "以前の日付形式のリンクを日記ページにリダイレクトする",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "ページを開くと、タイトルが以前の形式に一致する場合は、日記ページにリダイレクトされます。このオプションを有効にすると、リンクが無効になるのを防ぎます。"
 }

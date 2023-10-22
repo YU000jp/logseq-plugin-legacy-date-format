@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo wszystkich formatów dat",
+    "Date format": "Format daty",
+    "Today": "Dzisiaj",
+    "Matched the previous date format": "Dopasowany format poprzedniej daty",
+    "Formats have not changed.": "Format nie uległ zmianie.",
+    "Replace previous date format": "Zastępowanie poprzedniego formatu daty",
+    "selected (previous)": "Wybrany format (starsza wersja)",
+    "new format": "Nowy format",
+    "If the format displayed here is incorrect, refrain from running.": "Jeśli pokazany tutaj format jest nieprawidłowy, powstrzymaj się od jego uruchamiania.",
+    "Please back up your data before running.": "Utwórz kopię zapasową danych przed uruchomieniem.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Zaleca się wykonanie pełnej kopii zapasowej całego folderu przed kontynuowaniem. Obejmuje to zastępowanie ciągów zgodnych z określonym formatem daty. Nie możemy zagwarantować doskonałej wydajności i bezproblemowej pracy.",
+    "If you have a lot of file, it may take a long time to run.": "Jeśli masz dużo plików, ich uruchomienie może zająć dużo czasu.",
+    "Run (Replace)": "Uruchom (zamień)",
+    "Running...": "Środowiska wykonawczego...",
+    "Finish.": "Gotowy.",
+    "Support previous date format": "Obsługuje starsze formaty daty",
+    "Select previous date format": "Wybierz format poprzedniej daty",
+    "Replace from the previous Format to new format.": "Zastąp stary format nowym.",
+    "Open the dialog on click": "Kliknij, aby otworzyć okno dialogowe",
+    "Redirect the link of previous date format to the journal page": "Przekieruj linki w formacie poprzedniej daty na stronę pamiętnika",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Po otwarciu strony zostaniesz przekierowany na stronę pamiętnika, jeśli tytuł pasuje do poprzedniego formatu. Włączenie tej opcji zapobiega wyłączeniu łącza."
+}

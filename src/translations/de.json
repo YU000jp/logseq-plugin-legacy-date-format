@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo aller Datumsformate",
+    "Date format": "Datumsformat",
+    "Today": "Heute",
+    "Matched the previous date format": "Übereinstimmendes vorheriges Datumsformat",
+    "Formats have not changed.": "Das Format hat sich nicht geändert.",
+    "Replace previous date format": "Vorheriges Datumsformat ersetzen",
+    "selected (previous)": "Ausgewähltes Format (Legacy)",
+    "new format": "Neues Format",
+    "If the format displayed here is incorrect, refrain from running.": "Wenn das hier gezeigte Format falsch ist, unterlassen Sie die Ausführung.",
+    "Please back up your data before running.": "Sichern Sie Ihre Daten, bevor Sie sie ausführen.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Es wird empfohlen, ein vollständiges Backup des gesamten Ordners zu erstellen, bevor Sie fortfahren. Dazu gehört auch das Ersetzen von Zeichenfolgen, die dem angegebenen Datumsformat entsprechen. Wir können keine einwandfreie Leistung und einen reibungslosen Betrieb garantieren.",
+    "If you have a lot of file, it may take a long time to run.": "Wenn Sie viele Dateien haben, kann die Ausführung sehr lange dauern.",
+    "Run (Replace)": "Ausführen (Ersetzen)",
+    "Running...": "Laufzeit...",
+    "Finish.": "Fertig.",
+    "Support previous date format": "Unterstützt ältere Datumsformate",
+    "Select previous date format": "Vorheriges Datumsformat auswählen",
+    "Replace from the previous Format to new format.": "Ersetzen Sie das alte Format durch das neue Format.",
+    "Open the dialog on click": "Klicken Sie hier, um den Dialog zu öffnen",
+    "Redirect the link of previous date format to the journal page": "Links im vorherigen Datumsformat auf die Tagebuchseite umleiten",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Wenn Sie die Seite öffnen, werden Sie auf die Tagebuchseite weitergeleitet, wenn der Titel dem vorherigen Format entspricht. Wenn Sie diese Option aktivieren, wird verhindert, dass der Link deaktiviert wird."
+}

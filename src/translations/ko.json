@@ -1,0 +1,23 @@
+{
+    "All date format demo": "모든 날짜 형식의 데모",
+    "Date format": "날짜 형식",
+    "Today": "오늘",
+    "Matched the previous date format": "일치하는 이전 날짜 형식",
+    "Formats have not changed.": "형식은 변경되지 않았습니다.",
+    "Replace previous date format": "이전 날짜 형식 바꾸기",
+    "selected (previous)": "선택한 형식(레거시)",
+    "new format": "새로운 형식",
+    "If the format displayed here is incorrect, refrain from running.": "여기에 표시된 형식이 올바르지 않으면 실행하지 마십시오.",
+    "Please back up your data before running.": "실행하기 전에 데이터를 백업하십시오.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "계속하기 전에 전체 폴더를 완전히 백업하는 것이 좋습니다. 여기에는 지정된 날짜 형식과 일치하는 문자열 바꾸기가 포함됩니다. 우리는 문제없이 완벽한 성능과 작동을 보장 할 수 없습니다.",
+    "If you have a lot of file, it may take a long time to run.": "파일이 많으면 실행하는 데 시간이 오래 걸릴 수 있습니다.",
+    "Run (Replace)": "실행(바꾸기)",
+    "Running...": "런타임...",
+    "Finish.": "수행.",
+    "Support previous date format": "이전 날짜 형식 지원",
+    "Select previous date format": "이전 날짜 형식 선택",
+    "Replace from the previous Format to new format.": "이전 형식을 새 형식으로 바꿉니다.",
+    "Open the dialog on click": "클릭하여 대화 상자 열기",
+    "Redirect the link of previous date format to the journal page": "이전 날짜 형식의 링크를 일기 페이지로 리디렉션",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "페이지를 열면 제목이 이전 형식과 일치하는 경우 일기 페이지로 리디렉션됩니다. 이 옵션을 활성화하면 링크가 비활성화되지 않습니다."
+}

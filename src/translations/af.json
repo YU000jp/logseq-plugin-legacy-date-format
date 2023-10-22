@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo van alle datumformate",
+    "Date format": "Datum formaat",
+    "Today": "Vandag",
+    "Matched the previous date format": "Ooreenstemmende vorige datumformaat",
+    "Formats have not changed.": "Die formaat het nie verander nie.",
+    "Replace previous date format": "Vervang die vorige datumformaat",
+    "selected (previous)": "Geselekteerde formaat (nalatenskap)",
+    "new format": "Nuwe formaat",
+    "If the format displayed here is incorrect, refrain from running.": "As die formaat wat hier getoon word verkeerd is, moet u dit nie gebruik nie.",
+    "Please back up your data before running.": "Maak 'n rugsteun van u data voordat u hardloop.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Dit word aanbeveel om 'n volledige rugsteun van die hele lêergids te neem voordat u verder gaan. Dit sluit in die vervanging van snare wat ooreenstem met die gespesifiseerde datumformaat. Ons kan nie perfekte prestasie en werking sonder probleme waarborg nie.",
+    "If you have a lot of file, it may take a long time to run.": "As u baie lêers het, kan dit lank neem om uit te voer.",
+    "Run (Replace)": "hardloop (vervang)",
+    "Running...": "Looptyd...",
+    "Finish.": "Gedoen.",
+    "Support previous date format": "Ondersteun ouer datumformate",
+    "Select previous date format": "Kies vorige datumformaat",
+    "Replace from the previous Format to new format.": "Vervang die ou formaat met die nuwe formaat.",
+    "Open the dialog on click": "Klik om dialoog oop te maak",
+    "Redirect the link of previous date format to the journal page": "Herlei skakels in vorige datumformaat na die dagboekbladsy",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "As u die bladsy oopmaak, sal u na die dagboekbladsy herlei word as die titel ooreenstem met die vorige formaat. As u hierdie opsie aktiveer, kan die skakel nie gedeaktiveer word nie."
+}

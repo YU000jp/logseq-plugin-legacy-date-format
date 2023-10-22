@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Ukážka všetkých formátov dátumu",
+    "Date format": "Formát dátumu",
+    "Today": "Dnes",
+    "Matched the previous date format": "Zodpovedajúci formát predchádzajúceho dátumu",
+    "Formats have not changed.": "Formát sa nezmenil.",
+    "Replace previous date format": "Nahradenie predchádzajúceho formátu dátumu",
+    "selected (previous)": "Vybratý formát (staršia verzia)",
+    "new format": "Nový formát",
+    "If the format displayed here is incorrect, refrain from running.": "Ak je tu uvedený formát nesprávny, nespúšťajte ho.",
+    "Please back up your data before running.": "Pred spustením zálohujte údaje.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Pred pokračovaním sa odporúča vykonať úplnú zálohu celého priečinka. To zahŕňa nahradenie reťazcov, ktoré zodpovedajú zadanému formátu dátumu. Bez problémov nemôžeme zaručiť dokonalý výkon a prevádzku.",
+    "If you have a lot of file, it may take a long time to run.": "Ak máte veľa súborov, ich spustenie môže trvať dlho.",
+    "Run (Replace)": "Spustiť (nahradiť)",
+    "Running...": "Runtime...",
+    "Finish.": "Robené.",
+    "Support previous date format": "Podporuje staršie formáty dátumu",
+    "Select previous date format": "Výber formátu predchádzajúceho dátumu",
+    "Replace from the previous Format to new format.": "Nahraďte starý formát novým formátom.",
+    "Open the dialog on click": "Kliknutím otvorte dialógové okno",
+    "Redirect the link of previous date format to the journal page": "Presmerovanie odkazov v predchádzajúcom formáte dátumu na stránku denníka",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Keď otvoríte stránku, budete presmerovaní na stránku denníka, ak sa názov zhoduje s predchádzajúcim formátom. Zapnutím tejto možnosti zabránite zakázaniu prepojenia."
+}

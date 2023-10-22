@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo di tutti i formati di data",
+    "Date format": "Formato data",
+    "Today": "Oggi",
+    "Matched the previous date format": "Formato della data precedente corrispondente",
+    "Formats have not changed.": "Il formato non è cambiato.",
+    "Replace previous date format": "Sostituisci il formato della data precedente",
+    "selected (previous)": "Formato selezionato (legacy)",
+    "new format": "Nuovo formato",
+    "If the format displayed here is incorrect, refrain from running.": "Se il formato mostrato qui non è corretto, astenersi dall'eseguirlo.",
+    "Please back up your data before running.": "Eseguire il backup dei dati prima dell'esecuzione.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Si consiglia di eseguire un backup completo dell'intera cartella prima di procedere. Ciò include la sostituzione delle stringhe che corrispondono al formato di data specificato. Non possiamo garantire prestazioni e funzionamento perfetti senza problemi.",
+    "If you have a lot of file, it may take a long time to run.": "Se si dispone di molti file, l'esecuzione potrebbe richiedere molto tempo.",
+    "Run (Replace)": "Esegui (Sostituisci)",
+    "Running...": "Runtime...",
+    "Finish.": "Fatto.",
+    "Support previous date format": "Supporta i formati di data meno recenti",
+    "Select previous date format": "Seleziona il formato della data precedente",
+    "Replace from the previous Format to new format.": "Sostituisci il vecchio formato con il nuovo formato.",
+    "Open the dialog on click": "Fare clic per aprire la finestra di dialogo",
+    "Redirect the link of previous date format to the journal page": "Reindirizza i link nel formato della data precedente alla pagina del diario",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Quando apri la pagina, verrai reindirizzato alla pagina del diario se il titolo corrisponde al formato precedente. L'attivazione di questa opzione impedisce la disattivazione del collegamento."
+}

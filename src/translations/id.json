@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo semua format tanggal",
+    "Date format": "Format tanggal",
+    "Today": "Hari Ini",
+    "Matched the previous date format": "Cocok dengan format tanggal sebelumnya",
+    "Formats have not changed.": "Formatnya tidak berubah.",
+    "Replace previous date format": "Mengganti format tanggal sebelumnya",
+    "selected (previous)": "Format yang dipilih (warisan)",
+    "new format": "Format baru",
+    "If the format displayed here is incorrect, refrain from running.": "Jika format yang ditampilkan di sini salah, jangan menjalankannya.",
+    "Please back up your data before running.": "Cadangkan data Anda sebelum menjalankan.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Disarankan untuk mengambil cadangan lengkap dari seluruh folder sebelum melanjutkan. Ini termasuk mengganti string yang cocok dengan format tanggal yang ditentukan. Kami tidak dapat menjamin kinerja dan operasi yang sempurna tanpa masalah.",
+    "If you have a lot of file, it may take a long time to run.": "Jika Anda memiliki banyak file, mungkin perlu waktu lama untuk menjalankannya.",
+    "Run (Replace)": "Jalankan (Ganti)",
+    "Running...": "Runtime...",
+    "Finish.": "Selesai.",
+    "Support previous date format": "Mendukung format tanggal yang lebih lama",
+    "Select previous date format": "Pilih Format Tanggal Sebelumnya",
+    "Replace from the previous Format to new format.": "Ganti format lama dengan format baru.",
+    "Open the dialog on click": "Klik untuk membuka dialog",
+    "Redirect the link of previous date format to the journal page": "Alihkan tautan dalam format tanggal sebelumnya ke halaman buku harian",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Saat Anda membuka halaman, Anda akan diarahkan ke halaman buku harian jika judulnya cocok dengan format sebelumnya. Mengaktifkan opsi ini mencegah tautan dinonaktifkan."
+}

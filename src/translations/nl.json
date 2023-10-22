@@ -1,0 +1,23 @@
+{
+    "All date format demo": "Demo van alle datumnotaties",
+    "Date format": "Datumnotatie",
+    "Today": "Vandaag",
+    "Matched the previous date format": "Overeenkomende vorige datumnotatie",
+    "Formats have not changed.": "Het formaat is niet veranderd.",
+    "Replace previous date format": "De vorige datumnotatie vervangen",
+    "selected (previous)": "Geselecteerde indeling (verouderd)",
+    "new format": "Nieuw formaat",
+    "If the format displayed here is incorrect, refrain from running.": "Als de hier weergegeven indeling onjuist is, voert u deze niet uit.",
+    "Please back up your data before running.": "Maak een back-up van uw gegevens voordat u deze uitvoert.",
+    "Prior to proceeding, it's recommended to take a complete backup of the entire folder. This involves replacing strings matching the specified date format. Flawless performance and operation without any issues cannot be guaranteed.": "Het wordt aanbevolen om een volledige back-up van de hele map te maken voordat u doorgaat. Dit omvat het vervangen van tekenreeksen die overeenkomen met de opgegeven datumnotatie. We kunnen geen perfecte prestaties en werking zonder problemen garanderen.",
+    "If you have a lot of file, it may take a long time to run.": "Als u veel bestanden hebt, kan het lang duren om te worden uitgevoerd.",
+    "Run (Replace)": "Uitvoeren (vervangen)",
+    "Running...": "Runtime...",
+    "Finish.": "Klaar.",
+    "Support previous date format": "Ondersteunt oudere datumnotaties",
+    "Select previous date format": "Selecteer Vorige datumnotatie",
+    "Replace from the previous Format to new format.": "Vervang de oude indeling door de nieuwe indeling.",
+    "Open the dialog on click": "Klik om het dialoogvenster te openen",
+    "Redirect the link of previous date format to the journal page": "Koppelingen in de vorige datumnotatie omleiden naar de dagboekpagina",
+    "When opening the page, if the title matches the previous format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.": "Wanneer u de pagina opent, wordt u omgeleid naar de dagboekpagina als de titel overeenkomt met de vorige indeling. Als u deze optie inschakelt, wordt de koppeling niet uitgeschakeld."
+}

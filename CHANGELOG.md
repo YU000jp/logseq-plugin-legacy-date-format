@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.3.0...v1.4.0) (2023-10-22)
+
+
+### Features
+
+* **Translations:** full ( af, de, es, fr, id, it, ko, nb-NO, nl, pl, pt-BR, pt-PT, ru, sk, tr, uk, zh-CN, zh-Hant ) ([386ccd9](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/386ccd9ea851e628dae4b6a7436c5bfe89e085d2))
+
 # [1.3.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.2.0...v1.3.0) (2023-09-20)
 
 

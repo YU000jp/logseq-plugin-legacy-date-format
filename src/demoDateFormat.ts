@@ -1,7 +1,7 @@
 import {
   LSPluginBaseInfo,
-} from "@logseq/libs/dist/LSPlugin";
-import { format } from "date-fns";
+} from "@logseq/libs/dist/LSPlugin"
+import { format } from "date-fns"
 import { t } from "logseq-l10n"
 
 //設定画面から項目をオンにする→スタート画面が出る
@@ -16,20 +16,20 @@ export const loadDateFormatDemo = async () => {
         oldSet.loadDateFormatDemo === false &&
         newSet.loadDateFormatDemo === true
       ) {
-        openStartWindow();
+        openStartWindow()
         setTimeout(
           () => logseq.updateSettings({ loadDateFormatDemo: false }),
           300
-        );
+        )
       }
     }
-  );
-};
+  )
+}
 
 //設定項目がオンになったとき
 const openStartWindow = async () => {
   //今日の日付でフォーマットしてみる
-  const today = new Date();
+  const today = new Date()
 
   const list = [
     "E, d MMMM yyyy",
@@ -64,10 +64,10 @@ const openStartWindow = async () => {
     "yyyyMMdd",
     "yyyy_MM_dd",
     "yyyy年MM月dd日",
-  ];
+  ]
 
-  let tr: [string] = [""];
-  list.forEach((item) => tr.push(`<tr><td>${item}</td><td>${format(today, item)}</td></tr>`));
+  let tr: [string] = [""]
+  list.forEach((item) => tr.push(`<tr><td>${item}</td><td>${format(today, item)}</td></tr>`))
   //スタート画面を表示
   logseq.provideUI({
     key: "dateFormatDemo",
@@ -111,5 +111,5 @@ const openStartWindow = async () => {
       width: "500px",
       height: "780px",
     },
-  });
-};
+  })
+}

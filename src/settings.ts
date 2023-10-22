@@ -1,9 +1,9 @@
-import { SettingSchemaDesc } from "@logseq/libs/dist/LSPlugin.user";
+import { SettingSchemaDesc } from "@logseq/libs/dist/LSPlugin.user"
 import { t } from "logseq-l10n"
 
 /* user setting */
 // https://logseq.github.io/plugins/types/SettingSchemaDesc.html
-export const settingsTemplate= (): SettingSchemaDesc[] => [
+export const settingsTemplate = (): SettingSchemaDesc[] => [
   {
     //loadLegacyDateFormat
     key: "headingLoadLegacyDateFormat",
@@ -79,4 +79,4 @@ export const settingsTemplate= (): SettingSchemaDesc[] => [
     default: false,
     description: t("Open the dialog on click"),
   }
-];
+]

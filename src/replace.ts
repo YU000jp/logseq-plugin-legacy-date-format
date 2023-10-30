@@ -133,11 +133,11 @@ const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
     | PageEntity[]
     | null
   if (!allPagesArr) return
-  //ジャーナルページのみを取得
+  //日誌ページのみを取得
   const journalPagesArr: PageEntity[] = allPagesArr.filter(
     (page) => page["journal?"]
   )
-  //ジャーナルページからフォーマットの連想配列を作成する(キーに古いフォーマット、値に新しいフォーマット)
+  //日誌ページからフォーマットの連想配列を作成する(キーに古いフォーマット、値に新しいフォーマット)
   const journalDaysObj = {}
   journalPagesArr.forEach((page) => {
     if (!page.journalDay) return

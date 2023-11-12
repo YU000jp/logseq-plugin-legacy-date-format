@@ -6,7 +6,7 @@
     "license": "MIT",
     "logseq": {
         "id": "legacy-date-format",
-        "title": "Legacy date format",
+        "title": "Old date format",
         "icon": "./icon.png",
         "main": "./dist/index.html"
     },

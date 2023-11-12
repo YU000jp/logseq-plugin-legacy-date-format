@@ -1,4 +1,4 @@
-# Logseq Plugin: Legacy date format 🗝️
+# Logseq Plugin: Old date format 🗝️
 
 [English](https://github.com/YU000jp/logseq-plugin-legacy-date-format) | [日本語](https://github.com/YU000jp/logseq-plugin-legacy-date-format/blob/main/readme.ja.md)
 

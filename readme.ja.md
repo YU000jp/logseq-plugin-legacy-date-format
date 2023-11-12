@@ -89,6 +89,6 @@ Logseqでユーザー日付形式を変更し、再インデックスを実行�
 
 > [議論](https://github.com/YU000jp/logseq-plugin-legacy-date-format/discussions) タブに移動して、この種の情報を尋ねたり見つけたりしてください。
 
-製作者 > [YU000jp（GitHub）](https://github.com/YU000jp)
+製作者 > [@YU000jp](https://github.com/YU000jp)
 
 <a href="https://www.buymeacoffee.com/yu000japan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="🍌製作者にコーヒーをおごってください!" style="height: 42px;width: 152px" ></a>

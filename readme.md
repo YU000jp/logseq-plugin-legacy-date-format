@@ -29,7 +29,7 @@ Published 2023/08/20
 ## Getting Started
 
 Install from Logseq Marketplace
-  - Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Legacy` in the search field, select it from the search results and install.
+  - Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Old` in the search field, select it from the search results and install.
 
 ### Usage
 
@@ -88,6 +88,6 @@ Install from Logseq Marketplace
 
 > Go to the [discussion](https://github.com/YU000jp/logseq-plugin-legacy-date-format/discussions) tab to ask and find this kind of things.
 
-Author > [YU000jp (GitHub)](https://github.com/YU000jp)
+Author > [@YU000jp](https://github.com/YU000jp)
 
 <a href="https://www.buymeacoffee.com/yu000japan" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="🍌Buy Me A Coffee" style="height: 42px;width: 152px" ></a>

@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.0...v1.4.1) (2024-02-03)
+
+
+### Performance Improvements
+
+* Reduce the amount handled ([7d05d80](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/7d05d8092740671dd5b5da116948bd727d5742ef))
+
 # [1.4.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.3.0...v1.4.0) (2023-10-22)
 
 

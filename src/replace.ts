@@ -1,8 +1,4 @@
-import {
-  AppUserConfigs,
-  LSPluginBaseInfo,
-  PageEntity,
-} from "@logseq/libs/dist/LSPlugin"
+import { AppUserConfigs, BlockEntity, LSPluginBaseInfo, PageEntity, } from "@logseq/libs/dist/LSPlugin"
 import { format } from "date-fns"
 import { getJournalDayDate } from "./lib"
 import { t } from "logseq-l10n"
@@ -16,15 +12,10 @@ export const loadLegacyDateFormatReplace = async () => {
       newSet: LSPluginBaseInfo["settings"],
       oldSet: LSPluginBaseInfo["settings"]
     ) => {
-      if (
-        oldSet.loadLegacyDateFormatReplace === false &&
-        newSet.loadLegacyDateFormatReplace === true
-      ) {
+      if (oldSet.loadLegacyDateFormatReplace === false
+        && newSet.loadLegacyDateFormatReplace === true) {
         openStartWindow()
-        setTimeout(
-          () => logseq.updateSettings({ loadLegacyDateFormatReplace: false }),
-          300
-        )
+        setTimeout(() => logseq.updateSettings({ loadLegacyDateFormatReplace: false }), 300)
       }
     }
   )
@@ -32,22 +23,17 @@ export const loadLegacyDateFormatReplace = async () => {
 
 //設定項目がオンになったとき
 const openStartWindow = async () => {
-  const { preferredDateFormat } =
-    (await logseq.App.getUserConfigs()) as AppUserConfigs
+
+  const { preferredDateFormat } = (await logseq.App.getUserConfigs()) as { preferredDateFormat: AppUserConfigs["preferredDateFormat"] }
   try {
     if (preferredDateFormat === logseq.settings!.legacyDateFormatSelect) {
       //古いフォーマットと新しいフォーマットが同じ場合
-      logseq.UI.showMsg(t("Formats have not changed."), "warning", {
-        timeout: 5000,
-      })
+      logseq.UI.showMsg(t("Formats have not changed."), "warning", { timeout: 5000, })
       return
     }
     //今日の日付でフォーマットしてみる
     const today = new Date()
-    const legacyTodayStr = format(
-      today,
-      logseq.settings!.legacyDateFormatSelect
-    )
+    const legacyTodayStr = format(today, logseq.settings!.legacyDateFormatSelect)
     const newTodayStr = format(today, preferredDateFormat)
     //スタート画面を表示
     logseq.provideUI({
@@ -114,10 +100,8 @@ const openStartWindow = async () => {
       startButton.addEventListener("click", async () => {
         if (processing) return
         processing = true
-        const messageKey = await logseq.UI.showMsg(t("Running..."), "info", {
-          //実行中メッセージ
-          timeout: 100000,
-        })
+        //実行中メッセージ
+        const messageKey = await logseq.UI.showMsg(t("Running..."), "info", { timeout: 100000, })
         //処理
         await replaceAllJournalLink(messageKey, preferredDateFormat)
         processing = false
@@ -129,30 +113,19 @@ const openStartWindow = async () => {
 //
 const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
   //すべてのページを取得
-  const allPagesArr = (await logseq.Editor.getAllPages()) as
-    | PageEntity[]
-    | null
+  const allPagesArr = (await logseq.Editor.getAllPages()) as { journal?: PageEntity["journal?"], journalDay?: PageEntity["journalDay"] }[] | null
   if (!allPagesArr) return
   //日誌ページのみを取得
-  const journalPagesArr: PageEntity[] = allPagesArr.filter(
+  const journalPagesArr = allPagesArr.filter(
     (page) => page["journal?"]
+      && page.journalDay
   )
   //日誌ページからフォーマットの連想配列を作成する(キーに古いフォーマット、値に新しいフォーマット)
   const journalDaysObj = {}
-  journalPagesArr.forEach((page) => {
-    if (!page.journalDay) return
-    //日付をフォーマット
-    const legacyFormat = format(
-      getJournalDayDate(String(page.journalDay)),
-      logseq.settings!.legacyDateFormatSelect
-    )
-    const newFormat = format(
-      getJournalDayDate(String(page.journalDay)),
-      preferredDateFormat
-    )
+  journalPagesArr.forEach((page) =>
     //連想配列に入れる
-    journalDaysObj[legacyFormat] = newFormat
-  })
+    journalDaysObj[(format(getJournalDayDate(String(page.journalDay)), logseq.settings!.legacyDateFormatSelect))] = format(getJournalDayDate(String(page.journalDay)), preferredDateFormat)
+  )
 
   //journalDaysObjのforeach
   await queryAndReplace(journalDaysObj)
@@ -175,20 +148,17 @@ const queryAndReplace = (journalDaysObj: {}) =>
     ]
     `
       )
-      if (result.length > 0) {
-        for (const blocks of result) {
+      if (result.length > 0)
+        for (const blocks of result)
           for (const block of blocks) {
-            const legacyFormat = key
-            const newFormat = journalDaysObj[key]
+            const legacyFormat: string = key
+            const newFormat: string = journalDaysObj[key]
 
-            // 新しいフォーマットから古いフォーマットに置き換える
-            let content = block.content.replaceAll(newFormat, legacyFormat) // 二重動作防止のため
-            content = content.replaceAll(legacyFormat, newFormat)
-
-            await logseq.Editor.updateBlock(block.uuid, content)
+            await logseq.Editor.updateBlock(
+              (block as BlockEntity).uuid,
+              (block as BlockEntity).content.replaceAll(legacyFormat, newFormat) // 新しいフォーマットから古いフォーマットに置き換える
+            )
           }
-        }
-      }
     }
 
     resolve(0)

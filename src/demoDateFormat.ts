@@ -12,15 +12,10 @@ export const loadDateFormatDemo = async () => {
       newSet: LSPluginBaseInfo["settings"],
       oldSet: LSPluginBaseInfo["settings"]
     ) => {
-      if (
-        oldSet.loadDateFormatDemo === false &&
-        newSet.loadDateFormatDemo === true
-      ) {
+      if (oldSet.loadDateFormatDemo === false
+        && newSet.loadDateFormatDemo === true) {
         openStartWindow()
-        setTimeout(
-          () => logseq.updateSettings({ loadDateFormatDemo: false }),
-          300
-        )
+        setTimeout(() => logseq.updateSettings({ loadDateFormatDemo: false }), 300)
       }
     }
   )

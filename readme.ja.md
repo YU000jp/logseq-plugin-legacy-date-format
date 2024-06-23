@@ -1,14 +1,16 @@
 # Logseq Plugin: Old date format 🗝️
 
-[English](https://github.com/YU000jp/logseq-plugin-legacy-date-format) | [日本語](https://github.com/YU000jp/logseq-plugin-legacy-date-format/blob/main/readme.ja.md)
-
 通常、Logseqでは日付形式を変更した後に、日付リンクが更新されず、そのリンクが無効になります。そのリンクを置き換えて使用可能にするためのプラグインです。リダイレクトもできます。
   > Logseqでは、グラフ構築後にユーザー日付形式 を変更することは困難です。これは、再インデックスを実行した後でも、リンクが古い日付形式のままであるためです（[Logseq#4279](https://github.com/logseq/logseq/issues/4279)）。この問題を解決するために、このプラグインが開発されました。
 
-[![最新リリースバージョン](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
-[![ライセンス](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)
-[![ダウンロード](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-legacy-date-format/total.svg)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
-公開日：2023/08/20
+<div align="right">
+
+[English](https://github.com/YU000jp/logseq-plugin-legacy-date-format) | [日本語](https://github.com/YU000jp/logseq-plugin-legacy-date-format/blob/main/readme.ja.md)
+[![latest release version](https://img.shields.io/github/v/release/YU000jp/logseq-plugin-legacy-date-format)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
+[![License](https://img.shields.io/github/license/YU000jp/logseq-plugin-legacy-date-format?color=blue)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/YU000jp/logseq-plugin-legacy-date-format/total.svg)](https://github.com/YU000jp/logseq-plugin-legacy-date-format/releases)
+公開日 20230820 <a href="https://www.buymeacoffee.com/yu000japan"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=yu000japan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+</div>
 
 ## 概要
 
@@ -85,6 +87,4 @@ Logseqでユーザー日付形式を変更し、再インデックスを実行�
 
 ## クレジット
 
-1. 製作者 > [@YU000jp](https://github.com/YU000jp)
-
-<a href="https://www.buymeacoffee.com/yu000japan"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=yu000japan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+- 製作者 > [@YU000jp](https://github.com/YU000jp)

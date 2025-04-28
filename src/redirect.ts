@@ -1,6 +1,7 @@
 import { AppUserConfigs, PageEntity } from "@logseq/libs/dist/LSPlugin"
 import { format, isValid, parse } from "date-fns"
 import { t } from "logseq-l10n"
+import { getCurrentPageOriginalName, isPageExist } from "./query/advancedQuery"
 let processingPageName = ""
 export const loadLegacyDateFormatRedirect = () => {
   //ページを開いたとき
@@ -8,7 +9,7 @@ export const loadLegacyDateFormatRedirect = () => {
     let pageName = parent.document.querySelector("h1.page-title")
       ?.textContent as string | null | undefined
     if (!pageName) {
-      const current = (await logseq.Editor.getCurrentPage()) as { originalName: PageEntity["originalName"] } | null
+      const current = await getCurrentPageOriginalName() as { originalName: PageEntity["originalName"] } | null
       if (current)
         pageName = current.originalName
       else return
@@ -31,7 +32,7 @@ const checkDateFormat = async (pageName: string) => {
   if (processingPageName === pageName) return
   //pageNameに数値ひとつでも含まれているかどうかをチェックする
   if (!pageName.match(/\d/)) return
-  const legacyDateFormat = logseq.settings!.legacyDateFormatSelect
+  const legacyDateFormat = logseq.settings!.legacyDateFormatSelect as string
   if (!legacyDateFormat) return
   const { preferredDateFormat } = (await logseq.App.getUserConfigs()) as { preferredDateFormat: AppUserConfigs["preferredDateFormat"] }
   //pageNameの文字列が日付フォーマットにマッチするかどうかをチェックする
@@ -46,7 +47,7 @@ const matchDateFormat = async (pageName: string, parsedDate: Date, preferredDate
   logseq.UI.showMsg(t("Matched the previous date format"))
   //ページ移動
   const formatPageName = format(parsedDate, preferredDateFormat)
-  if ((await logseq.Editor.getPage(formatPageName)) as { uuid: PageEntity["uuid"] } | null)
+  if (await isPageExist(formatPageName))
     logseq.App.replaceState("page", { name: formatPageName })
   processingPageName = ""
 }

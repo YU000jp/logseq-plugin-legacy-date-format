@@ -1,7 +1,8 @@
-import { AppUserConfigs, BlockEntity, LSPluginBaseInfo, PageEntity, } from "@logseq/libs/dist/LSPlugin"
+import { AppUserConfigs, BlockEntity, LSPluginBaseInfo, PageEntity, UIMsgKey, } from "@logseq/libs/dist/LSPlugin"
 import { format } from "date-fns"
 import { getJournalDayDate } from "./lib"
 import { t } from "logseq-l10n"
+import { matchWordBlocks, getJournalPages } from "./query/advancedQuery"
 let processing: Boolean = false
 //設定画面から項目をオンにする→スタート画面が出る→スタート画面で実行ボタンを押す→実行ボタンを押したときのイベント処理
 
@@ -33,7 +34,7 @@ const openStartWindow = async () => {
     }
     //今日の日付でフォーマットしてみる
     const today = new Date()
-    const legacyTodayStr = format(today, logseq.settings!.legacyDateFormatSelect)
+    const legacyTodayStr = format(today, logseq.settings!.legacyDateFormatSelect as string)
     const newTodayStr = format(today, preferredDateFormat)
     //スタート画面を表示
     logseq.provideUI({
@@ -110,56 +111,40 @@ const openStartWindow = async () => {
   }
 }
 
-//
-const replaceAllJournalLink = async (messageKey, preferredDateFormat) => {
-  //すべてのページを取得
-  const allPagesArr = (await logseq.Editor.getAllPages()) as { journal?: PageEntity["journal?"], journalDay?: PageEntity["journalDay"] }[] | null
-  if (!allPagesArr) return
-  //日誌ページのみを取得
-  const journalPagesArr = allPagesArr.filter(
-    (page) => page["journal?"]
-      && page.journalDay
-  )
-  //日誌ページからフォーマットの連想配列を作成する(キーに古いフォーマット、値に新しいフォーマット)
-  const journalDaysObj = {}
-  journalPagesArr.forEach((page) =>
-    //連想配列に入れる
-    journalDaysObj[(format(getJournalDayDate(String(page.journalDay)), logseq.settings!.legacyDateFormatSelect))] = format(getJournalDayDate(String(page.journalDay)), preferredDateFormat)
-  )
+// // 日誌ページのリンクを置換する
+const replaceAllJournalLink = async (messageKey: UIMsgKey, preferredDateFormat: string) => {
+  // 日誌ページのみを取得
+  const journalPagesArr = await getJournalPages() as string[] | null
+  if (!journalPagesArr) return
 
-  //journalDaysObjのforeach
-  await queryAndReplace(journalDaysObj)
+  // 日誌ページから古いフォーマットと新しいフォーマットのペアを作成する
+  const journalDayPairs = journalPagesArr.map((journalDay) => {
+    const journalDate = getJournalDayDate(journalDay)
+    return {
+      legacyFormat: format(journalDate, logseq.settings!.legacyDateFormatSelect as string),
+      newFormat: format(journalDate, preferredDateFormat),
+    }
+  })
+
+  // journalDayPairsを使って置換処理を実行
+  await queryAndReplace(journalDayPairs)
 
   logseq.UI.closeMsg(messageKey)
   logseq.UI.showMsg(t("Finish."), "info", { timeout: 5000 })
 }
 
-const queryAndReplace = (journalDaysObj: {}) =>
+
+// journalDayPairsを使って置換処理を実行する関数
+const queryAndReplace = (journalDayPairs: { legacyFormat: string, newFormat: string }[]) =>
   new Promise(async (resolve) => {
-    for (const key of Object.keys(journalDaysObj)) {
-      // 古いフォーマットの各日付に一致するものをクエリーで検索する
-      const result: any[] = await logseq.DB.datascriptQuery(
-        `
-    [:find (pull ?b [*])
-     :where
-     [?b :block/content ?c]
-     [(re-pattern "${key}") ?p]
-     [(re-find ?p ?c)]
-    ]
-    `
-      )
-      if (result.length > 0)
-        for (const blocks of result)
-          for (const block of blocks) {
-            const legacyFormat: string = key
-            const newFormat: string = journalDaysObj[key]
-
-            await logseq.Editor.updateBlock(
-              (block as BlockEntity).uuid,
-              (block as BlockEntity).content.replaceAll(legacyFormat, newFormat) // 新しいフォーマットから古いフォーマットに置き換える
-            )
-          }
+    for (const { legacyFormat, newFormat } of journalDayPairs) {
+      const blocks = await matchWordBlocks(legacyFormat) as { content: BlockEntity["content"], uuid: BlockEntity["uuid"] }[] | null
+      if (blocks)
+        for (const block of blocks) {
+          const content = block.content.replaceAll(legacyFormat, newFormat)
+          if (content !== block.content)
+            await logseq.Editor.updateBlock(block.uuid, content)
+        }
     }
-
     resolve(0)
   })

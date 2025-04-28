@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.1...v1.4.2) (2025-04-28)
+
+
+### Performance Improvements
+
+* **ref:** Reduced filtering load by utilising queries ([a22349a](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/a22349a8413de1afd6b57b48c728138271549a51))
+
 ## [1.4.1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.0...v1.4.1) (2024-02-03)
 
 

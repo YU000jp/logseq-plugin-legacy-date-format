@@ -3,6 +3,7 @@ import {
 } from "@logseq/libs/dist/LSPlugin"
 import { format } from "date-fns"
 import { t } from "logseq-l10n"
+import { formatList } from "./settings"
 
 //設定画面から項目をオンにする→スタート画面が出る
 //トリガー
@@ -26,43 +27,10 @@ const openStartWindow = async () => {
   //今日の日付でフォーマットしてみる
   const today = new Date()
 
-  const list = [
-    "E, d MMMM yyyy",
-    "E, MM/dd/yyyy",
-    "E, dd-MM-yyyy",
-    "E, dd.MM.yyyy",
-    "E, yyyy/MM/dd",
-    "EEE, MM/dd/yyyy",
-    "EEE, dd-MM-yyyy",
-    "EEE, dd.MM.yyyy",
-    "EEE, yyyy/MM/dd",
-    "EEEE, MM/dd/yyyy",
-    "EEEE, dd-MM-yyyy",
-    "EEEE, dd.MM.yyyy",
-    "EEEE, yyyy/MM/dd",
-    "MM-dd-yyyy",
-    "MM/dd/yyyy",
-    "dd-MM-yyyy",
-    "dd.MM.yyyy",
-    "yyyy/MM/dd",
-    "MM-dd-yyyy",
-    "MM/dd/yyyy",
-    "MMM do, yyyy",
-    "MMMM do, yyyy",
-    "MM_dd_yyyy",
-    "dd-MM-yyyy",
-    "do MMM yyyy",
-    "do MMMM yyyy",
-    "yyyy-MM-dd",
-    "yyyy-MM-dd EEEE",
-    "yyyy/MM/dd",
-    "yyyyMMdd",
-    "yyyy_MM_dd",
-    "yyyy年MM月dd日",
-  ]
+
 
   let tr: [string] = [""]
-  list.forEach((item) => tr.push(`<tr><td>${item}</td><td>${format(today, item)}</td></tr>`))
+  formatList.forEach((item) => tr.push(`<tr><td>${item}</td><td>${format(today, item)}</td></tr>`))
   //スタート画面を表示
   logseq.provideUI({
     key: "dateFormatDemo",

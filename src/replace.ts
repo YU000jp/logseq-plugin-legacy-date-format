@@ -2,7 +2,7 @@ import { AppUserConfigs, BlockEntity, LSPluginBaseInfo, PageEntity, UIMsgKey, } 
 import { format } from "date-fns"
 import { getJournalDayDate } from "./lib"
 import { t } from "logseq-l10n"
-import { matchWordBlocks, getJournalPages } from "./query/advancedQuery"
+import { matchWordBlocks, getJournalPages, matchWordBlocksRegExp, regexPattern } from "./query/advancedQuery"
 let processing: Boolean = false
 //設定画面から項目をオンにする→スタート画面が出る→スタート画面で実行ボタンを押す→実行ボタンを押したときのイベント処理
 
@@ -103,21 +103,53 @@ const openStartWindow = async () => {
         processing = true
         //実行中メッセージ
         const messageKey = await logseq.UI.showMsg(t("Running..."), "info", { timeout: 100000, })
-        //処理
-        await replaceAllJournalLink(messageKey, preferredDateFormat)
+
+        const [regularCount, regexpCount] = await Promise.all([
+          replaceAllJournalLink(preferredDateFormat),
+          replaceJournalLinkRegExp(preferredDateFormat),
+        ])
+        logseq.UI.closeMsg(messageKey)
+        const count = regularCount + regexpCount
+        if (count > 0)
+          logseq.UI.showMsg(t("Finish. Updated {{count}} blocks.", { count: count.toString() }), "info", { timeout: 5000 })
+        else
+          logseq.UI.showMsg(t("Finish. No blocks were updated."), "info", { timeout: 5000 })
         processing = false
       })
     }, 100)
   }
 }
 
-// // 日誌ページのリンクを置換する
-const replaceAllJournalLink = async (messageKey: UIMsgKey, preferredDateFormat: string) => {
-  // 日誌ページのみを取得
-  const journalPagesArr = await getJournalPages() as string[] | null
-  if (!journalPagesArr) return
+const replaceJournalLinkRegExp = async (preferredDateFormat: string): Promise<number> => {
+  console.log("Start replaceJournalLinkRegExp")
+  const result = await matchWordBlocksRegExp(preferredDateFormat) as { content: BlockEntity["content"], uuid: BlockEntity["uuid"] }[] | null
+  if (!result) {
+    console.log("End replaceJournalLinkRegExp - No blocks found")
+    return 0
+  }
 
-  // 日誌ページから古いフォーマットと新しいフォーマットのペアを作成する
+  let updatedCount = 0
+  for (const { content, uuid } of result) {
+    const newContent = content.replaceAll("[[" + regexPattern(logseq.settings!.legacyDateFormatSelect as string) + "]]", "[[" + regexPattern(preferredDateFormat) + "]]")
+    if (newContent !== content) {
+      await logseq.Editor.updateBlock(uuid, newContent)
+      console.log("Updated block:", uuid, newContent)
+      updatedCount++
+    }
+  }
+  console.log(`End replaceJournalLinkRegExp - Updated ${updatedCount} blocks`)
+  return updatedCount
+}
+
+// // 日誌ページのリンクを置換する
+const replaceAllJournalLink = async (preferredDateFormat: string): Promise<number> => {
+  console.log("Start replaceAllJournalLink")
+  const journalPagesArr = await getJournalPages() as string[] | null
+  if (!journalPagesArr) {
+    console.log("End replaceAllJournalLink - No journal pages found")
+    return 0
+  }
+
   const journalDayPairs = journalPagesArr.map((journalDay) => {
     const journalDate = getJournalDayDate(journalDay)
     return {
@@ -125,26 +157,53 @@ const replaceAllJournalLink = async (messageKey: UIMsgKey, preferredDateFormat: 
       newFormat: format(journalDate, preferredDateFormat),
     }
   })
+  console.log("Generated format pairs:", journalDayPairs.length)
 
-  // journalDayPairsを使って置換処理を実行
-  await queryAndReplace(journalDayPairs)
-
-  logseq.UI.closeMsg(messageKey)
-  logseq.UI.showMsg(t("Finish."), "info", { timeout: 5000 })
+  const updatedCount = await queryAndReplace(journalDayPairs)
+  console.log(`End replaceAllJournalLink - Updated ${updatedCount} blocks`)
+  return updatedCount
 }
 
-
 // journalDayPairsを使って置換処理を実行する関数
-const queryAndReplace = (journalDayPairs: { legacyFormat: string, newFormat: string }[]) =>
-  new Promise(async (resolve) => {
-    for (const { legacyFormat, newFormat } of journalDayPairs) {
-      const blocks = await matchWordBlocks(legacyFormat) as { content: BlockEntity["content"], uuid: BlockEntity["uuid"] }[] | null
-      if (blocks)
-        for (const block of blocks) {
-          const content = block.content.replaceAll(legacyFormat, newFormat)
-          if (content !== block.content)
-            await logseq.Editor.updateBlock(block.uuid, content)
-        }
+const queryAndReplace = async (journalDayPairs: { legacyFormat: string, newFormat: string }[]): Promise<number> => {
+  const legacyFormats = journalDayPairs.map(pair => pair.legacyFormat)
+  const blocks = await matchWordBlocks(legacyFormats)
+
+  if (!blocks || blocks.length === 0) {
+    return 0
+  }
+
+  const formatMap = new Map(
+    journalDayPairs.map(({ legacyFormat, newFormat }) => [`[[${legacyFormat}]]`, `[[${newFormat}]]`])
+  )
+
+  let updatedCount = 0
+
+  // 各ブロックを処理
+  for (const block of blocks) {
+    let updatedContent = block.content
+    let isUpdated = false
+
+    // 各フォーマットペアで置換を試行
+    for (const [legacyFormat, newFormat] of formatMap) {
+      if (updatedContent.includes(legacyFormat)) {
+        updatedContent = updatedContent.replaceAll(legacyFormat, newFormat)
+        isUpdated = true
+      }
     }
-    resolve(0)
-  })
+
+    // 変更があった場合のみ更新
+    if (isUpdated) {
+      await logseq.Editor.updateBlock(block.uuid, updatedContent)
+      console.log(`Updated block ${block.uuid}`)
+      updatedCount++
+    }
+  }
+
+  return updatedCount
+}
+
+// 正規表現のエスケープ用ヘルパー関数
+const escapeRegExp = (string: string): string => {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}

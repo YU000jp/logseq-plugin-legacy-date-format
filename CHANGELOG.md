@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.2...v1.5.0) (2025-04-29)
+
+
+### Features
+
+* **enhancement:** Replace links even if the file does not exist in the graph [#9](https://github.com/YU000jp/logseq-plugin-legacy-date-format/issues/9) ([d7025a0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/d7025a05fe8d2c54dae892f10a6a69dfdb45f5df))
+
 ## [1.4.2](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.1...v1.4.2) (2025-04-28)
 
 

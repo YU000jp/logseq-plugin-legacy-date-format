@@ -1,10 +1,22 @@
 # Logseq Plugin: Old date format 🗝️
 
-Logseq does not update date links after changing the date format and those links become invalid. This is a plugin that replaces those links.
-  > In Logseq, changing the user date format after graph construction is challenging. This is because even after performing a re-index, the links remain with the old date format. ( [Logseq#4279](https://github.com/logseq/logseq/issues/4279) ) To address this issue, this plugin has been developed.
+A plugin to fix invalid date links after changing date format in Logseq.
+
+### Features
+
+1. Batch Convert Legacy Date Links
+   - Replace invalid date links with the new format
+   - Convert links even if the target page doesn't exist 🆕
+   - Support for Obsidian format (yyyy-MM-dd) and hierarchy format (yyyy/MM/dd)
+
+2. Automatic Page Redirect
+   - Automatically redirects from old format pages to new format pages
+
+> [!NOTE]
+> This plugin was created to solve Logseq's date format change issue ([Logseq#4279](https://github.com/logseq/logseq/issues/4279))
 
 > [!WARNING]
-This plugin does not work with Logseq db version.
+> Not compatible with Logseq db version
 
 <div align="right">
 
@@ -15,37 +27,26 @@ This plugin does not work with Logseq db version.
 Published 2023/08/20 <a href="https://www.buymeacoffee.com/yu000japan"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=yu000japan&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
 </div>
 
-## Overview
+## How to Use
 
-1. Main: Replace journal links on all files
-   - Replace it from the legacy format to new format. Search and replace in queries.
-     > After changing user date format and running re-index on Logseq.
-     1. Replace inactive links with format yyyy-MM-dd, which is consistent with Obsidian.
-     1. Replace it with hierarchy-enabled yyyy/MM/dd format.
-1. Option: Redirect when open a page
-   - Enabling the use of expired links due to changes in user date formatting. When opening the page, if the title matches the legacy format, it will redirect to the journal page. Enabling this option prevents links from becoming inactive.
+### 1️⃣ Installation
+- Click [`---`] in the top right toolbar
+- Open [`Plugins`]
+- Search for "Legacy" in marketplace
+- Click Install
 
----
-
-## Getting Started
-
-Install from Logseq Marketplace
-  - Press [`---`] on the top right toolbar to open [`Plugins`]. Select marketplace. Type `Old` in the search field, select it from the search results and install.
-
-### Usage
-
-- Setup from Plugin Settings
-
+### 2️⃣ Setup
+1. Open Plugin Settings
    ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/e74ed3e8-a141-447f-a971-5238521383e0)
 
-- Replace from the legacy format to new format
-
+2. Convert from Old to New Format
    ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 
-- After changing the Date format, it's necessary to perform a re-index in Logseq. There are a few important points to note:
-  1. The UUID of blocks gets changed, which might lead to the inability to use features like embedding or references.
-  1. Pages other than journals have their "create-at" creation date property updated. This is an invisible property.
- 
+### Important Notes ⚠️
+- Always run re-index in Logseq after conversion
+  - Block UUIDs will change, which may affect embeds and references
+  - Non-journal pages will have their hidden "create-at" property updated
+
 ---
 
 ## Showcase / Questions / Ideas / Help

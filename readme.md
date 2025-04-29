@@ -37,9 +37,11 @@ Published 2023/08/20 <a href="https://www.buymeacoffee.com/yu000japan"><img src=
 
 ### 2️⃣ Setup
 1. Open Plugin Settings
+
    ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/e74ed3e8-a141-447f-a971-5238521383e0)
 
 2. Convert from Old to New Format
+
    ![image](https://github.com/YU000jp/logseq-plugin-legacy-date-format/assets/111847207/1a175dc3-3c38-456f-838a-4f0cbdb3dc7b)
 
 ### Important Notes ⚠️

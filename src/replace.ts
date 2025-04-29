@@ -103,17 +103,16 @@ const openStartWindow = async () => {
         processing = true
         //実行中メッセージ
         const messageKey = await logseq.UI.showMsg(t("Running..."), "info", { timeout: 100000, })
-
         const [regularCount, regexpCount] = await Promise.all([
           replaceAllJournalLink(preferredDateFormat),
           replaceJournalLinkRegExp(preferredDateFormat),
         ])
-        logseq.UI.closeMsg(messageKey)
         const count = regularCount + regexpCount
         if (count > 0)
-          logseq.UI.showMsg(t("Finish. Updated {{count}} blocks.", { count: count.toString() }), "info", { timeout: 5000 })
+          await logseq.UI.showMsg(t("Finish. Updated {{count}} blocks.", { count: count.toString() }), "info", { timeout: 5000 })
         else
-          logseq.UI.showMsg(t("Finish. No blocks were updated."), "info", { timeout: 5000 })
+          await logseq.UI.showMsg(t("Finish. No blocks were updated."), "info", { timeout: 5000 })
+        logseq.UI.closeMsg(messageKey)
         processing = false
       })
     }, 100)

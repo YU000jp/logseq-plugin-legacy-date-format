@@ -25,8 +25,16 @@ import { loadLegacyDateFormatReplace } from "./replace"
 import { settingsTemplate } from "./settings"
 import { loadDateFormatDemo } from "./demoDateFormat"
 
+const isLogseqDbModel = (): boolean =>
+  parent.document.querySelector("div.block-tags") !== null
+
 /* main */
 const main = async () => {
+  if (isLogseqDbModel()) {
+    await logseq.UI.showMsg("This plugin does not support the Logseq DB model. Please use this plugin with file-based graphs only.", "error")
+    return
+  }
+
   await l10nSetup({
     builtinTranslations: {//Full translations
       ja, af, de, es, fr, id, it, ko, "nb-NO": nbNO, nl, pl, "pt-BR": ptBR, "pt-PT": ptPT, ru, sk, tr, uk, "zh-CN": zhCN, "zh-Hant": zhHant

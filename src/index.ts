@@ -31,7 +31,7 @@ const isLogseqDbModel = (): boolean =>
 /* main */
 const main = async () => {
   if (isLogseqDbModel()) {
-    await logseq.UI.showMsg("this plugin does not support the Logseq db model", "error")
+    await logseq.UI.showMsg("This plugin does not support the Logseq DB model. Please use this plugin with file-based graphs only.", "error")
     return
   }
 

@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.5.0...v1.6.0) (2026-04-17)
+
+
+### Features
+
+* guard plugin startup on Logseq DB model ([d25f1c1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/d25f1c19a0f674237acc2144411b91622fcc1bf1))
+
 # [1.5.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.4.2...v1.5.0) (2025-04-29)
 
 

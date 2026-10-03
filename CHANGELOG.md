@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.6.0...v1.6.1) (2026-10-03)
+
+
+### Bug Fixes
+
+* DBグラフ判定を公式APIに置き換え、DOMヒューリスティックを廃止 ([4ab167c](https://github.com/YU000jp/logseq-plugin-legacy-date-format/commit/4ab167cac7fb0ad204b143ae94973e883d38ce4f))
+
 # [1.6.0](https://github.com/YU000jp/logseq-plugin-legacy-date-format/compare/v1.5.0...v1.6.0) (2026-04-17)
 
 

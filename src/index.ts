@@ -25,15 +25,29 @@ import { loadLegacyDateFormatReplace } from "./replace"
 import { settingsTemplate } from "./settings"
 import { loadDateFormatDemo } from "./demoDateFormat"
 
-const isLogseqDbModel = (): boolean =>
-  parent.document.querySelector("div.block-tags") !== null
+// グラフ種別判定(公式API。0.10.xホストでは未実装 → false)
+const checkLogseqDbGraph = async (): Promise<boolean> => {
+  try {
+    const value = await (logseq.App as any).checkCurrentIsDbGraph()
+    return typeof value === "boolean" ? value : false
+  } catch {
+    return false // API非搭載ホスト = DBグラフを開けない旧アプリ
+  }
+}
+
+const showDbGraphIncompatibilityMsg = () =>
+  logseq.UI.showMsg("This plugin does not support the Logseq DB model. Please use this plugin with file-based graphs only.", "error")
 
 /* main */
 const main = async () => {
-  if (isLogseqDbModel()) {
-    await logseq.UI.showMsg("This plugin does not support the Logseq DB model. Please use this plugin with file-based graphs only.", "error")
+  if (await checkLogseqDbGraph()) {
+    await showDbGraphIncompatibilityMsg()
     return
   }
+  // グラフ切替でDBグラフへ移った場合も警告する
+  logseq.App.onCurrentGraphChanged(async () => {
+    if (await checkLogseqDbGraph()) showDbGraphIncompatibilityMsg()
+  })
 
   await l10nSetup({
     builtinTranslations: {//Full translations
